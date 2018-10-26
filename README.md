@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-npm install --save vue-rangedate-picker-winslow
+npm install --save vue-rangedate-picker-xingliang
 ```
 
 ## Usage
