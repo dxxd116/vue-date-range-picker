@@ -7,4 +7,4 @@ yarn-error.log
 reports
 .idea/*
 test/dist
-
+dist

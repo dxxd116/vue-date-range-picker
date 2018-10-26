@@ -51,8 +51,8 @@ const defaultPresets = function (i18n = defaultI18n) {
   return {
     today: function () {
       const n = new Date()
-      const startToday = new Date(n.getFullYear(), n.getMonth(), n.getDate() + 1, 0, 0)
-      const endToday = new Date(n.getFullYear(), n.getMonth(), n.getDate() + 1, 23, 59)
+      const startToday = new Date(n.getFullYear(), n.getMonth(), n.getDate() + 1, 0, 0, 0)
+      const endToday = new Date(n.getFullYear(), n.getMonth(), n.getDate() + 1, 23, 59, 59)
       return {
         label: presetRangeLabel[i18n].today,
         active: false,
@@ -376,6 +376,7 @@ export default {
     },
     setDateValue: function () {
       this.$emit('selected', this.dateRange)
+      console.log(JSON.stringify(this.dateRange))
       if (!this.isCompact) {
         this.toggleCalendar()
       }

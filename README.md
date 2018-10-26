@@ -22,7 +22,7 @@ npm install --save vue-rangedate-picker-xingliang
 
 ```js
 import Vue from 'vue'
-import VueRangedatePicker from 'vue-rangedate-picker-winslow'
+import VueRangedatePicker from 'vue-rangedate-picker-xingliang'
 
 Vue.use(VueRangedatePicker)
 ```
@@ -32,10 +32,10 @@ Vue.use(VueRangedatePicker)
 ```html
 <!-- Include after Vue -->
 <!-- Local files -->
-<script src="vue-rangedate-picker-winslow/dist/vue-rangedate-picker.min.js"></script>
+<script src="vue-rangedate-picker-xingliang/dist/vue-rangedate-picker.min.js"></script>
 
 <!-- From CDN -->
-<script src="https://unpkg.com/vue-rangedate-picker-winslow"></script>
+<script src="https://unpkg.com/vue-rangedate-picker-xingliang"></script>
 ```
 
 ### Available Events
@@ -47,14 +47,25 @@ You can catch these below Events to `<vue-rangedate-picker @events="events"></vu
   *Description* : function that will `$emit` when datepicker set value, this function will get parameter response :
   ```javascript
   {
-    start: new Date(2018, 05, 01)
-    end: new Date(2018, 05, 31)
+    start: new Date(2018, 05, 01)  //Date are actually 1 day after the displayed value
+    end: new Date(2018, 05, 31)    //Date are actually 1 day after the displayed value 
+  
   }
   ```
 
 ### Available Props
 
 You can pass these below props to `<vue-rangedate-picker :props="props"></vue-rangedate-picker>` template :
++ **currentDateRange** 
+
+  The current date range you want to display in the range picker. 
+
+  Please be aware that you need to add 1 day more to the desired date range
+
+  in order to properly dispaly the date range 
+  
+  Because the dispalyed date range is actually deducted by 1 internally.
+  
 
 + **configs**
 
