@@ -14,7 +14,7 @@ import VueRangeDatePicker from './RangedatePicker.vue'
 var n= new Date()
 var end = new Date(n.getFullYear(), n.getMonth(), n.getDate() + 10)
 var dateRange={
-  start: new Date(),
+  start: new Date(n.getFullYear(), n.getMonth(), n.getDate() + 1),
   end: end
 }
 

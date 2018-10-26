@@ -208,6 +208,9 @@ export default {
     }
   },
   computed: {
+    // dateRange: function () {
+    //   return this.parentDateRange
+    // },
     monthsLocale: function () {
       return this.months || availableMonths[this.i18n]
     },
