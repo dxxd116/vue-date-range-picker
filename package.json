@@ -1,6 +1,6 @@
 {
   "name": "vue-rangedate-picker-xingliang",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Date picker with range selection",
   "author": "cai xingliang <xingliang.cai@nio.com>",
   "main": "dist/vue-rangedate-picker.js",
