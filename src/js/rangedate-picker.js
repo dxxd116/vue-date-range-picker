@@ -122,7 +122,7 @@ const defaultPresets = function (i18n = defaultI18n) {
 export default {
   name: 'vue-rangedate-picker',
   props: {
-    dateRange: {
+    currentDateRange: {
       type: Object,
       default: () => null
     },
@@ -182,7 +182,7 @@ export default {
   },
   data () {
     return {
-      // dateRange: {},
+      dateRange: this.currentDateRange || {},
       numOfDays: 7,
       isFirstChoice: true,
       isOpen: false,
@@ -205,7 +205,11 @@ export default {
   watch: {
     startNextActiveMonth: function (value) {
       if (value === 0) this.activeYearEnd = this.activeYearStart + 1
+    },
+    currentDateRange (newRange) {
+      this.dateRange = newRange
     }
+
   },
   computed: {
     // dateRange: function () {

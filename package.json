@@ -9,7 +9,7 @@
   "unpkg": "dist/vue-rangedate-picker.js",
   "style": "dist/vue-rangedate-picker.css",
   "scripts": {
-    "clean": "del coverage && del dist\\*.js* && del .\\*.log",
+    "clean": "del-cli coverage && del-cli dist/*.js* && del-cli ./*.log",
     "dev": "cross-env BABEL_ENV=test webpack-dev-server --inline --hot --content-base ./test/unit/ --config config/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint src test config",
@@ -17,7 +17,7 @@
     "test:cover": "cross-env BABEL_ENV=test karma start config/karma.cover.conf.js",
     "test:cover-upload": "npm run test:cover && codecov",
     "test:unit": "cross-env BABEL_ENV=test karma start config/karma.unit.conf.js",
-    "build": "del dist\\*.js && webpack --config config/webpack.prod.conf.js"
+    "build": "del-cli dist/*.js && webpack --config config/webpack.prod.conf.js"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -96,7 +96,7 @@
     "node": ">= 6.0"
   },
   "dependencies": {
-    "del": "^3.0.0",
+    "del-cli": "^1.1.0",
     "fecha": "^2.3.2",
     "npm": "^6.4.1"
   }
