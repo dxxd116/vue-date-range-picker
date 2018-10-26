@@ -11,17 +11,26 @@
 // */
 
 import VueRangeDatePicker from './RangedatePicker.vue'
+var n= new Date()
+var end = new Date(n.getFullYear(), n.getMonth(), n.getDate() + 10)
+var dateRange={
+  start: new Date(),
+  end: end
+}
 
 new window.Vue({
   el: 'app',
+  data: {
+    dateRange: dateRange
+  },
   template: `<div id="demo">
 <div>
 <strong>Full form</strong>
-<vue-rangedate-picker></vue-rangedate-picker>
+<vue-rangedate-picker :dateRange="dateRange"></vue-rangedate-picker>
 </div>
 <div style="height: 300px">
 <strong>Compact (mobile)</strong>
-<vue-rangedate-picker compact="true"></vue-rangedate-picker>
+<vue-rangedate-picker :dateRange="dateRange" compact="true"></vue-rangedate-picker>
 </div>
 </div>`,
   components: { VueRangeDatePicker }

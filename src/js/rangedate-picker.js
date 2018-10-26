@@ -122,6 +122,10 @@ const defaultPresets = function (i18n = defaultI18n) {
 export default {
   name: 'vue-rangedate-picker',
   props: {
+    dateRange: {
+      type: Object,
+      default: () => null
+    },
     configs: {
       type: Object,
       default: () => defaultConfig
@@ -178,7 +182,7 @@ export default {
   },
   data () {
     return {
-      dateRange: {},
+      // dateRange: {},
       numOfDays: 7,
       isFirstChoice: true,
       isOpen: false,

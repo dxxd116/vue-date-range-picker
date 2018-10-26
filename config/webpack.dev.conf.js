@@ -45,7 +45,7 @@ module.exports = {
         NODE_ENV: '"development"'
       }
     }),
-    new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ])
+    // new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ])
   ],
   devtool: '#eval-source-map'
 }
