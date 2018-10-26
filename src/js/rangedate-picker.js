@@ -376,7 +376,7 @@ export default {
     },
     setDateValue: function () {
       this.$emit('selected', this.dateRange)
-      console.log(JSON.stringify(this.dateRange))
+      // console.log(JSON.stringify(this.dateRange))
       if (!this.isCompact) {
         this.toggleCalendar()
       }
