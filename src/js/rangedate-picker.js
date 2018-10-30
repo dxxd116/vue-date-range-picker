@@ -325,6 +325,7 @@ export default {
     },
     isDateSelected (r, i, key, startMonthDay, endMonthDate) {
       const result = this.getDayIndexInMonth(r, i, startMonthDay) + 1
+      // console.log('Arguments in isDateSeleted: \n' + JSON.stringify(arguments))
       if (result < 2 || result > endMonthDate + 1) return false
 
       let currDate = null
@@ -376,7 +377,7 @@ export default {
     },
     setDateValue: function () {
       this.$emit('selected', this.dateRange)
-      // console.log(JSON.stringify(this.dateRange))
+      console.log('start: ' + this.dateRange.start.toLocaleString() + '\nend:' + this.dateRange.end.toLocaleString())
       if (!this.isCompact) {
         this.toggleCalendar()
       }
