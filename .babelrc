@@ -8,8 +8,7 @@
     , "power-assert"
   ],
   "plugins": [
-    
-    // "transform-runtime"
+       "@babel/plugin-transform-runtime"
   ],
   "env": {
     "test": {

@@ -377,7 +377,7 @@ export default {
     },
     setDateValue: function () {
       this.$emit('selected', this.dateRange)
-      console.log('start: ' + this.dateRange.start.toLocaleString() + '\nend:' + this.dateRange.end.toLocaleString())
+      // console.log('start: ' + this.dateRange.start.toLocaleString() + '\nend:' + this.dateRange.end.toLocaleString())
       if (!this.isCompact) {
         this.toggleCalendar()
       }
