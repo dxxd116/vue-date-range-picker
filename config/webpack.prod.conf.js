@@ -10,7 +10,7 @@ function resolve (dir) {
 }
 
 const commonConfig = {
-  mode: 'development',
+  mode: 'production',
   resolve: {
     extensions: ['.vue', '.js'],
     alias: {
@@ -28,7 +28,8 @@ const commonConfig = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env']
+          presets: ['@babel/preset-env'],
+          plugins: ['@babel/plugin-transform-runtime']
         }
       }
     },
