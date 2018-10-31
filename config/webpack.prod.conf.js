@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -67,7 +68,10 @@ const commonConfig = {
     new VueLoaderPlugin()
   ],
   optimization:{
-    minimize: true
+    minimize: true,
+    minimizer: [new UglifyJsPlugin({
+      parallel: true
+    })]
   }
 }
 module.exports = [
