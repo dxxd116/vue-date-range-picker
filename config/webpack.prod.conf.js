@@ -2,12 +2,14 @@ const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
 const commonConfig = {
+  mode: 'development',
   resolve: {
     extensions: ['.vue', '.js'],
     alias: {
@@ -22,7 +24,12 @@ const commonConfig = {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules|vue\/dist/,
-      loader: 'babel-loader'
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
     },
     {
       test: /\.vue$/,
@@ -35,7 +42,17 @@ const commonConfig = {
     },
     {
       test: /\.css$/,
-      loader: 'style!less!css'
+      use: [
+        {
+          loader: 'vue-style-loader'
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            modules: false
+          }
+        }
+      ]
     }]
   },
   externals: {
@@ -47,15 +64,11 @@ const commonConfig = {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin( {
-      minimize : true,
-      sourceMap : false,
-      mangle: true,
-      compress: {
-        warnings: false
-      }
-    })
-  ]
+    new VueLoaderPlugin()
+  ],
+  optimization:{
+    minimize: true
+  }
 }
 module.exports = [
   merge(commonConfig, {

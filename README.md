@@ -4,7 +4,7 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) 
 
 
-> Vue Date picker with range selection
+> Vue Date picker with range selection and also display a custom date range inside the Date picker.
 
 ## Demo
 
@@ -47,8 +47,8 @@ You can catch these below Events to `<vue-rangedate-picker @events="events"></vu
   *Description* : function that will `$emit` when datepicker set value, this function will get parameter response :
   ```javascript
   {
-    start: new Date(2018, 05, 01)  //Date are actually 1 day after the displayed value
-    end: new Date(2018, 05, 31)    //Date are actually 1 day after the displayed value 
+    start: new Date(2018, 05, 01)  //Date are actually 1 day after the displayed Date
+    end: new Date(2018, 05, 31)    //Date are actually 1 day after the displayed Date 
   
   }
   ```

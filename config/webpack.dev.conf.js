@@ -1,12 +1,14 @@
 const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
 module.exports = {
+  mode:"development",
   entry: {
     tests: 'mocha-loader!./test/unit/index.js',
     demo: './src/demo.js'
@@ -37,6 +39,20 @@ module.exports = {
           js: 'babel-loader!eslint-loader'
         }
       }
+    },
+    {
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'vue-style-loader'
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            modules: false
+          }
+        }
+      ]
     }]
   },
   plugins: [
@@ -46,6 +62,7 @@ module.exports = {
       }
     }),
     // new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ])
+    new VueLoaderPlugin()
   ],
   devtool: '#eval-source-map'
 }

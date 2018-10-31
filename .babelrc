@@ -1,13 +1,15 @@
 {
   "presets": [
-    ["es2015", {
+
+    ["@babel/env", {
       "modules": false
-      }],
-    "flow-vue"
+      }]
+    // "flow-vue"
+    , "power-assert"
   ],
   "plugins": [
-    "babel-plugin-espower",
-    "transform-runtime"
+    
+    // "transform-runtime"
   ],
   "env": {
     "test": {
