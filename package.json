@@ -81,12 +81,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gwindes/vue-rangedate-picker-winslow.git"
+    "url": "git+https://git.nevint.com/xingliang.cai/vue-rangedate-picker-xingliang"
   },
   "bugs": {
-    "url": "https://github.com/gwindes/vue-rangedate-picker-winslow/issues"
+    "url": "https://git.nevint.com/xingliang.cai/vue-rangedate-picker-xingliang/issues"
   },
-  "homepage": "https://github.com/gwindes/vue-rangedate-picker-winslow#readme",
+  "homepage": "https://git.nevint.com/xingliang.cai/vue-rangedate-picker-xingliang",
   "license": "MIT",
   "keywords": [
     "plugin",
