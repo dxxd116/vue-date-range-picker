@@ -72,7 +72,7 @@
     "vue-template-compiler": "^2.5.13",
     "webpack": "4.23.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "3.1.2",
+    "webpack-dev-server": "3.1.11",
     "webpack-merge": "^4.1.1"
   },
   "files": [
@@ -81,12 +81,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://git.nevint.com/xingliang.cai/vue-rangedate-picker-xingliang"
+    "url": "git+https://github.com/dxxd116/vue-date-range-picker.git"
   },
   "bugs": {
-    "url": "https://git.nevint.com/xingliang.cai/vue-rangedate-picker-xingliang/issues"
+    "url": "https://github.com/dxxd116/vue-date-range-picker/issues"
   },
-  "homepage": "https://git.nevint.com/xingliang.cai/vue-rangedate-picker-xingliang",
+  "homepage": "https://github.com/dxxd116/vue-date-range-picker",
   "license": "MIT",
   "keywords": [
     "plugin",
